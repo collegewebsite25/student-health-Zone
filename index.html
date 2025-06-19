@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Health Management System in College Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="login-screen" class="auth-box">
+    <h2>Login</h2>
+    <input type="text" id="login-username" placeholder="Username" required />
+    <input type="password" id="login-password" placeholder="Password" required />
+    <select id="user-type">
+      <option value="student">Student</option>
+      <option value="admin">Admin</option>
+    </select>
+    <button onclick="login()">Login</button>
+    <p class="toggle-link" onclick="showRegister()">Don't have a student account? Register</p>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <!-- Registration Screen -->
+  <div id="register-screen" class="auth-box hidden">
+    <h2>Student Registration</h2>
+    <input type="text" id="reg-username" placeholder="Choose Username" required />
+    <input type="password" id="reg-password" placeholder="Choose Password" required />
+    <button onclick="register()">Register</button>
+    <p class="toggle-link" onclick="showLogin()">Already have an account? Login</p>
+    <p id="register-error" class="error"></p>
+  </div>
+
+  <!-- Student UI -->
+  <div id="student-ui" class="hidden">
+    <header class="main-header">
+      <div class="logo">Student Health Zone</div>
+      <nav class="main-nav">
+        <a href="#hero">Home</a>
+        <a href="#appointments">Appointments</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </header>
+
+    <section class="hero" id="hero">
+      <h1>Your Health, Our Priority</h1>
+      <p>Access healthcare services, schedule appointments, and manage your health records all in one place.</p>
+      <button onclick="scrollToAppointments()">Schedule Appointment</button>
+    </section>
+
+    <section class="quick-actions" id="appointments">
+      <h2>Quick Actions</h2>
+      <div class="card-grid">
+        <div class="card">📅<h3>Schedule Appointment</h3>
+          <form onsubmit="bookAppointment(event)">
+            <input type="text" id="studentName" placeholder="Your Name" required />
+            <input type="date" id="date" required />
+            <textarea id="reason" rows="2" placeholder="Reason" required></textarea>
+            <button type="submit">Submit</button>
+            <p id="appointment-msg" style="color:green;"></p>
+          </form>
+        </div>
+        <div class="card">🎥<h3>Virtual Care</h3><p><em>Coming Soon</em></p></div>
+        <div class="card">💬<h3>Message Provider</h3><p><em>Coming Soon</em></p></div>
+        <div class="card">📁<h3>Health Records</h3>
+          <ul id="health-records-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources" id="resources">
+      <h2>Health Resources</h2>
+      <div class="card-grid">
+        <div class="card"><h4>Mental Health Support</h4><p>Access counseling services and mental health resources</p></div>
+        <div class="card"><h4>COVID-19 Information</h4><p>Stay updated with the latest campus health guidelines</p></div>
+        <div class="card"><h4>Wellness Programs</h4><p>Join fitness classes and wellness workshops</p></div>
+      </div>
+    </section>
+
+    <section id="contact" style="text-align: center; padding: 2rem;">
+      <h2>Contact Us</h2>
+      <p>Email: websitecollege25@gmail.com</p>
+      <p>Phone: +91 7029473601</p>
+    </section>
+  </div>
+
+  <!-- Admin UI -->
+  <div id="admin-ui" class="hidden">
+    <header class="main-header">
+      <div class="logo">Admin Dashboard</div>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </header>
+    <div class="admin-section">
+      <h2>Booked Appointments: </h2>
+      <div id="admin-appointments"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!--
+
+
+  Default Account:
+
+        Student: 
+              Username: student_health
+              Password: Student@#07
+
+        Admin: 
+              Username: health_admin
+              Password: Admin@Health2025 
+              
+              
+              -->

@@ -1,0 +1,121 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f0f2f5;
+}
+.hidden { display: none; }
+
+.auth-box {
+  max-width: 400px;
+  margin: 100px auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.auth-box h2 {
+  color: #004080;
+}
+.toggle-link {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #004080;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0066cc;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004080;
+}
+.main-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #004080;
+}
+.logout-btn {
+  background: #004080;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+.hero {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.card h3, .card h4 {
+  margin-top: 0.5rem;
+  color: #004080;
+}
+.quick-actions, .resources {
+  padding: 2rem 1rem;
+}
+.quick-actions h2, .resources h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #004080;
+}
+.card em {
+  font-style: normal;
+  color: grey;
+  font-weight: bold;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
