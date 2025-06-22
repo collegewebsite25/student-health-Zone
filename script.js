@@ -92,6 +92,7 @@ function renderAdminData() {
 }
 function renderHealthRecords() {
   const defaultHealthRecords = [
+    {"No Record Found"},
     { date: "2025-03-12", condition: "Flu", status: "Recovered" },
     { date: "2025-01-22", condition: "Allergy", status: "Ongoing" }
   ];
