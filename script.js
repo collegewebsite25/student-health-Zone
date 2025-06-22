@@ -92,8 +92,8 @@ function renderAdminData() {
 }
 function renderHealthRecords() {
   const defaultHealthRecords = [
-    { date: "2025-06-24", condition: "XXXX", status: "No Record Found" },
-    { date: "2025-06-24", condition: "XXXX", status: "No Record Found" }
+    { date: "2025-06-24", condition: "", status: "No Record Found" },
+    { date: "2025-06-24", condition: "", status: "No Record Found" }
   ];
   const list = document.getElementById("health-records-list");
   if (!list) return;
